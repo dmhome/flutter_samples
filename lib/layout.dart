@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/gridView/use_gridView.dart';
 import 'package:flutter_sample/image/local_image.dart';
 import 'package:flutter_sample/listView/use_horizontal_list.dart';
 import 'package:flutter_sample/listView/use_listview.dart';
 import 'package:flutter_sample/listView/use_long_listview.dart';
+import 'package:flutter_sample/navigation/SecondScreen.dart';
+import 'package:flutter_sample/navigation/use_navigator.dart';
 import 'package:flutter_sample/theme/globleTheme.dart';
 
 import 'package:flutter_sample/button/use_button.dart';
 import 'package:flutter_sample/statefulWidget/use_statefulWidget.dart';
-void main() => runApp(new MyApp14());
+void main()  {
+  runApp(new MaterialApp(
+    home: new FirstScreen(),
+    routes: <String, WidgetBuilder> {
+      '/SecondScreen': (BuildContext context) => new SecondScreen(),
+    },
+
+  ));
+
+}
 
 class MyApp extends StatelessWidget {
   @override
